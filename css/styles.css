@@ -1,0 +1,389 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,700;1,500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --primaryColor: #22162b;
+  --secondPrimaryColor: #e54f6d;
+  --yellow: #f8c630;
+  --backgroundColor: #faf9f9;
+  --thirdPrimaryColor: #451F55;
+  --forthPrimaryColor: #724E91;
+}
+
+body {
+  background-color: var(--backgroundColor);
+}
+
+/* nav bar */
+
+header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  left: 0;
+  background-color: var(--primaryColor);
+  padding: 0px 20%;
+}
+
+nav .container .status-bar {
+  display: flex;
+  font-size: 0.8rem;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-left: 3rem;
+  width: 100%;
+}
+
+nav ul li {
+  list-style: none;
+}
+
+nav ul li a {
+  color: #fff;
+  font-weight: 500;
+}
+
+nav ul li a span {
+  margin-left: 0.5rem;
+}
+
+nav ul li a img {
+  height: 60%;
+}
+
+.logo img {
+  width: 80%;
+}
+
+.search-post {
+  padding: 0.5rem 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.search {
+  width: 80%;
+}
+form {
+  display: flex;
+}
+
+.search input[type="text"] {
+  height: 2rem;
+  padding: 0 1rem;
+  border: none;
+  width: 100%;
+  border-radius: 5px 0% 0% 5px;
+}
+
+.search button {
+  color: white;
+  background-color: var(--yellow);
+  font-size: 1rem;
+  border: none;
+  height: 2rem;
+  border-radius: 0% 5px 5px 0%;
+  padding: 0.25rem 1rem;
+}
+
+.search input[type="text"]:focus,
+.search button:focus {
+  outline: none;
+}
+
+.post {
+  background-color: var(--secondPrimaryColor);
+  height: 2rem;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  color: white;
+  font-weight: 500;
+  padding: 0 1em;
+  border: none;
+  border-radius: 5px;
+}
+
+.post img {
+  height: 70%;
+  width: auto;
+  margin-right: 5px;
+}
+
+.post:focus {
+  outline: none;
+}
+
+/* main index */
+
+.index {
+  padding: 0% 20%;
+}
+
+.banner img {
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 5px;
+}
+
+.navigation {
+  background-color: white;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  padding: 5px 10px;
+  margin-top: 5px;
+}
+
+.title-discovery {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.2vw;
+}
+
+.card-container {
+  display: flex;
+  overflow: hidden;
+}
+
+.card-container::-webkit-scrollbar {
+  width: 0;
+}
+
+.card-item {
+  display: inline-block;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 5px;
+}
+
+.card-item img {
+  width: 100%;
+}
+
+.card-item .uni-name {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.2vw;
+}
+
+.card-item:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+}
+
+.list-rent {
+  background-color: white;
+  border-radius: 10px;
+  margin-top: 5px;
+  padding: 5px 10px;
+}
+
+.list-rent .title-rent {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.2vw;
+}
+
+.list-rent .rent-grid-container {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+}
+
+.rent-grid-item {
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+  margin: 5px;
+  padding: 15px;
+  font-size: 16px;
+}
+
+.rent-grid-item img {
+  width: 100%;
+  height: 50%;
+}
+
+.title-product {
+  font-size: 1vw;
+}
+
+.price-product {
+  font-size: 1.3vw;
+  font-weight: 700;
+  color: red;
+}
+
+.info {
+  display: flex;
+  font-size: 0.8vw;
+  opacity: 0.5;
+  font-weight: 600;
+}
+
+.rent-grid-item:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+}
+
+@media only screen and (max-width: 1000px) {
+  nav ul {
+    display: none;
+  }
+
+  nav .logo {
+      width: 100%;
+      text-align: center;
+  }
+
+  nav .logo img {
+      height: 100%;
+      width: auto;
+  }
+
+  nav .search-post .search {
+      width: 100%;
+  }
+
+  nav .search-post .post {
+      display: none;
+  }
+
+  .index {
+    padding: auto;
+  }
+
+  .list-rent .rent-grid-container {
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+  }
+}
+
+@media only screen and (max-width: 730px) {
+    main {
+        padding: 0;
+    }
+
+    .banner img {
+        margin-top: 0;
+        border-radius: 0;
+    }
+
+    .list-rent .title-rent, .title-discovery{
+        font-size: 100%;
+    }
+
+    .list-rent .rent-grid-container {
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+
+    .title-product {
+        font-size: 100%;
+    }
+
+    .price-product {
+        font-size: 120%;
+    }
+
+    .info {
+        font-size: 80%;
+    }
+
+    .card-item {
+        width: 50%;
+    }
+}
+
+
+
+/* LOGIN */
+
+.login-form {
+  background-color: white;
+  width: 600px;
+  margin: 10px auto;
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.login-form .title-login {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+.form-login form {
+  display: block;
+}
+
+.form-login input[type="text"], .form-login input[type="password"]{
+  width: 100%;
+  padding: 10px 20px;
+  margin: 15px 0;
+  display: block;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.form-login input[type="text"]:focus, .form-login input[type="password"]:focus {
+  outline: none;
+}
+
+.login-btn {
+  text-transform: uppercase;
+  color: white;
+  font-weight: 700;
+  font-size: 1.1rem;
+  width: 100%;
+  background-color: var(--secondPrimaryColor);
+  border-radius: 10px;
+  border: none;
+  padding: 8px 0;
+  margin: 15px 0;
+}
+
+.other-button {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 0;
+}
+
+.other-button .forgot, .other-button .register {
+  text-transform: uppercase;
+  color: white;
+  font-weight: 700;
+  font-size: 1rem;
+  width: 49%;
+  border: none;
+  border-radius: 10px;
+  padding: 5px 0;
+}
+
+.other-button .forgot {
+  background-color: var(--thirdPrimaryColor);
+}
+
+.other-button .register {
+  background-color: var(--forthPrimaryColor);
+}
+
+
+@media only screen and (max-width: 600px) {
+  .login-form {
+    width: 100%;
+  }
+}
