@@ -149,12 +149,11 @@ form {
 .title-discovery {
   text-transform: uppercase;
   font-weight: 700;
-  font-size: 1.2vw;
+  font-size: 1.2rem;
 }
 
 .card-container {
   display: flex;
-  overflow: hidden;
 }
 
 .card-container::-webkit-scrollbar {
@@ -162,9 +161,10 @@ form {
 }
 
 .card-item {
-  display: inline-block;
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
   text-align: center;
+  width: 25%;
+  overflow: hidden;
   border-radius: 10px;
   padding: 10px;
   margin: 5px;
@@ -177,7 +177,7 @@ form {
 .card-item .uni-name {
   text-transform: uppercase;
   font-weight: 700;
-  font-size: 1.2vw;
+  font-size: 1rem;
 }
 
 .card-item:hover {
@@ -195,7 +195,7 @@ form {
 .list-rent .title-rent {
   text-transform: uppercase;
   font-weight: 700;
-  font-size: 1.2vw;
+  font-size: 1.2rem;
 }
 
 .list-rent .rent-grid-container {
@@ -216,18 +216,19 @@ form {
 }
 
 .title-product {
-  font-size: 1vw;
+  font-size: 1rem;
 }
 
 .price-product {
-  font-size: 1.3vw;
+  font-size: 1.2rem;
   font-weight: 700;
   color: red;
 }
 
 .info {
   display: flex;
-  font-size: 0.8vw;
+  font-size: 0.7rem;
+  overflow: hidden;
   opacity: 0.5;
   font-weight: 600;
 }
@@ -238,6 +239,11 @@ form {
 }
 
 @media only screen and (max-width: 1000px) {
+  .index {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: unset;
+  }
   nav ul {
     display: none;
   }
@@ -260,19 +266,16 @@ form {
       display: none;
   }
 
-  .index {
-    padding: auto;
-  }
-
   .list-rent .rent-grid-container {
     display: grid;
     grid-template-columns: 33.3% 33.3% 33.3%;
   }
 }
 
-@media only screen and (max-width: 730px) {
-    main {
-        padding: 0;
+@media only screen and (max-width: 600px) {
+    .index {
+        padding: unset;
+        margin: auto;
     }
 
     .banner img {
