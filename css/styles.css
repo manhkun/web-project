@@ -387,3 +387,18 @@ form {
     width: 100%;
   }
 }
+
+/* register */
+
+.or-login {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.or-login > :first-child {
+  opacity: 0.5;
+}
+
+.or-login .is-account a {
+  color: #00A3FF;
+}
