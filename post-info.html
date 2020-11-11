@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://kit.fontawesome.com/yourcode.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,700;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>THUÊ NHÀ TRỌ</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <div class="status-bar">
+                    <a href="" class="logo"><img src="./assets/icons/home (1) 1.png" alt=""></a>
+                    <ul class="nav-link">
+                        <li>
+                            <a href=""><img src="./assets/icons/home 1.png" alt=""><span>Trang chủ</span></a>
+                        </li>
+                        <li>
+                            <a href=""><img src="./assets/icons/house 1.png" alt=""><span>Tôi cho thuê</span></a>
+                        </li>
+                        <li>
+                            <a href=""><img src="./assets/icons/bell 1.png" alt=""><span>Thông báo</span></a>
+                        </li>
+                        <li class="user">  
+                            <a href=""><img src="./assets/icons/user 1.png" alt=""><span>Phùng Mạnh</span></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="search-post">
+                    <div class="search">
+                        <form action="">
+                            <input type="text" placeholder="Tìm kiếm.....">
+                            <button type="submit"><i class="fa fa-search"></i></button>
+                        </form>
+                    </div>
+                    <button type="button-post" class="post">
+                        <img src="./assets/icons/sticky-notes 1.png" alt="">
+                        <span>Đăng tin</span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="post-container">
+        <section class="head-info">
+            <img src="./assets/icons/play-button.png" alt="">
+            <h3>THÔNG TIN</h3>
+        </section>
+        <section class="form-post">
+            <form action="">
+                <div class="form-room">
+                    <div class="type-room">
+                        <label for="room">Loại phòng <span>*</span></label>
+                        <select name="room" id="" required>
+                            <option value="" disabled selected>Loại phòng</option>
+                            <option value="">Phòng trọ</option>
+                            <option value="">Chung cư mini</option>
+                            <option value="">Nhà nguyên căn</option>
+                            <option value="">Chung cư nguyên căn</option>
+                        </select>
+                    </div>
+                    <div class="amount-room">
+                        <label for="amount">Số phòng <span>*</span></label>
+                        <input type="number" placeholder="Số phòng" required>
+                    </div>
+                </div>
+                <label for="square">Diện tích (m2) <span>*</span></label>
+                <input name="square" type="text" id="square" placeholder="Diện tích" required></input>
+                <div class="price-room">
+                    <div class="price">
+                        <label for="price">Giá (đ) <span>*</span></label>
+                        <select name="price" id="" required>
+                            <option value="" disabled selected>Chọn xã, phường, thị trấn</option>
+                            <option value="">Phú Thọ</option>
+                        </select>
+                    </div>
+                    <span>/</span>
+                    <div class="unit-time">
+                        <select name="unit" id="" required>
+                            <option value="">Tháng</option>
+                            <option value="">Quý</option>
+                            <option value="">Năm</option>
+                        </select>
+                    </div>
+                </div>
+                <label for="own">Chung chủ <span>*</span></label>
+                <select name="own" id="" required>
+                    <option value="" disabled selected>Chung chủ</option>
+                    <option value="">Có</option>
+                    <option value="">Không</option>
+                </select>
+                <label for="pre-money">Tiền cọc (đ) <span>*</span></label>
+                <input name="pre-money" type="text" id="square" placeholder="Tiền cọc" required></input>
+                <div class="btn-container">
+                    <button class="continue-address-btn" type="submit">TIẾP TỤC</button>
+                </div>
+                
+            </form>
+        </section>
+    </main>
+</body>
+</html>
