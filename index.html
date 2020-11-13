@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,700;1,500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="slick-1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="slick-1.8.1/slick/slick-theme.css">
     <title>THUÊ NHÀ TRỌ</title>
 </head>
 <body>
@@ -16,16 +18,19 @@
                     <a href="" class="logo"><img src="./assets/icons/home (1) 1.png" alt=""></a>
                     <ul class="nav-link">
                         <li>
-                            <a href=""><img src="./assets/icons/home 1.png" alt=""><span>Trang chủ</span></a>
+                            <a href="./index.html"><img src="./assets/icons/home 1.png" alt=""><span>Trang chủ</span></a>
                         </li>
                         <li>
-                            <a href=""><img src="./assets/icons/house 1.png" alt=""><span>Tôi cho thuê</span></a>
+                            <a href="./manage_post.html"><img src="./assets/icons/house 1.png" alt=""><span>Tôi cho thuê</span></a>
                         </li>
                         <li>
-                            <a href=""><img src="./assets/icons/bell 1.png" alt=""><span>Thông báo</span></a>
+                            <a role="button" class="btn-notify"><img src="./assets/icons/bell 1.png" alt=""><span>Thông báo</span></a>
+                            <!-- <div class="notify">
+                                Bạn có 1 tin nhắn mới 
+                            </div> -->
                         </li>
                         <li class="user">  
-                            <a href=""><img src="./assets/icons/user 1.png" alt=""><span>Phùng Mạnh</span></a>
+                            <a href="./login.html"><img src="./assets/icons/user 1.png" alt=""><span>Đăng nhập</span></a>
                         </li>
                     </ul>
                 </div>
@@ -36,10 +41,10 @@
                             <button type="submit"><i class="fa fa-search"></i></button>
                         </form>
                     </div>
-                    <button type="button-post" class="post">
+                    <a href="./post-address.html" class="post">
                         <img src="./assets/icons/sticky-notes 1.png" alt="">
                         <span>Đăng tin</span>
-                    </button>
+                    </a>
                 </div>
             </div>
         </nav>
@@ -51,6 +56,18 @@
         <section class="navigation">
             <div class="title-discovery">Khám phá</div>
             <div class="card-container">
+                <div class="card-item">
+                    <img src="./assets/image/logoDHQG.png" alt="">
+                    <div class="uni-name">đhqg-hn</div>
+                </div>
+                <div class="card-item">
+                    <img src="./assets/image/logoDHQG.png" alt="">
+                    <div class="uni-name">đhqg-hn</div>
+                </div>
+                <div class="card-item">
+                    <img src="./assets/image/logoDHQG.png" alt="">
+                    <div class="uni-name">đhqg-hn</div>
+                </div>
                 <div class="card-item">
                     <img src="./assets/image/logoDHQG.png" alt="">
                     <div class="uni-name">đhqg-hn</div>
@@ -145,5 +162,44 @@
             </div>
         </section>
     </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="slick-1.8.1/slick/slick.min.js"></script>
+    <script>  
+        $('.card-container').slick({
+            dots: true,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            responsive: [
+                {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: true
+                }
+                },
+                {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1
+                }
+                },
+                {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+                }
+                // You can unslick at a given breakpoint now by adding:
+                // settings: "unslick"
+                // instead of a settings object
+            ]
+            });
+    </script>
 </body>
 </html>

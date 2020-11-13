@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,700;1,500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>THUÊ NHÀ TRỌ</title>
@@ -44,21 +45,42 @@
             </div>
         </nav>
     </header>
-    <main class="forgot">
-        <section class="login-form">
-            <div class="title-login">đặt lại mật khẩu</div>
-            <div class="form-login">
-                <form action="">
-                    <div class="text-field">
-                        <input type="text" name="uname" id="" placeholder="Nhập tên tài khoản" required>
-                    </div>
-                    <div class="text-field">
-                        <input type="password" name="password" id="" placeholder="Nhập mật khẩu" required>
-                    </div>
-                    <button type="submit" class="login-btn">đặt lại</button>
-                </form>
+    <main class="post-container">
+        <section class="head-image">
+            <img id="back-button" src="./assets/icons/play-button.png" alt="">
+            <h3>HÌNH ẢNH</h3>
+        </section>
+        <section class="image-post-container">
+            <form id="image-input" action="">
+                <div class="list-img">
+                    <!-- <div class="image-uploaded"  hidden>
+                        <img src="./assets/icons/camera 1.png" alt="">
+                        
+                    </div> -->
+
+                </div>
+               
+                <div class="image-upload">
+                    <label for="file-input">
+                        <div class="upload-icon">
+                            <img class="icon" src="./assets/icons/camera 1.png">
+                        </div>
+                    </label>
+                    <input id="file-input" type="file" />
+                </div>
+            </form>
+            <div class="note">
+                <h3>Để cho thuê nhanh hơn: </h3>
+                <p>- Chụp hình khổ ngang: phòng trọ, phòng vệ sinh, không gian sử dụng chung (nếu có), bên ngoài, ...</p>
+                <h3>Không: </h3>
+                <p>- Sử dụng hình ảnh trùng lặp hoặc lấy từ Internet</p>
+                <p>- Chèn số điện thoại/email/logo vào hình</p>
+            </div>
+            <div class="btn-container">
+                <button class="continue-address-btn" type="submit">TIẾP TỤC</button>
             </div>
         </section>
     </main>
+    <script src="./js/script.js"></script>
 </body>
 </html>

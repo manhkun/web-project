@@ -45,56 +45,69 @@
         </nav>
     </header>
     <main class="post-container">
-        <section class="head-info">
-            <img src="./assets/icons/play-button.png" alt="">
-            <h3>THÔNG TIN</h3>
+        <section class="head-infraction">
+            <img id="back-button" src="./assets/icons/play-button.png" alt="">
+            <h3>CƠ SỞ VẬT CHẤT</h3>
         </section>
         <section class="form-post">
             <form action="">
                 <div class="form-room">
                     <div class="type-room">
-                        <label for="room">Loại phòng <span>*</span></label>
+                        <label for="room">Phòng tắm <span>*</span></label>
                         <select name="room" id="" required>
-                            <option value="" disabled selected>Loại phòng</option>
-                            <option value="">Phòng trọ</option>
-                            <option value="">Chung cư mini</option>
-                            <option value="">Nhà nguyên căn</option>
-                            <option value="">Chung cư nguyên căn</option>
+                            <option value="" disabled selected>Phòng tắm</option>
+                            <option value="">Có</option>
+                            <option value="">Không</option>
                         </select>
                     </div>
                     <div class="amount-room">
-                        <label for="amount">Số phòng <span>*</span></label>
-                        <input type="number" placeholder="Số phòng" required>
-                    </div>
-                </div>
-                <label for="square">Diện tích (m2) <span>*</span></label>
-                <input name="square" type="text" id="square" placeholder="Diện tích" required></input>
-                <div class="price-room">
-                    <div class="price">
-                        <label for="price">Giá (đ) <span>*</span></label>
-                        <input type="text" name="price" placeholder="Giá">
-                    </div>
-                    <span>/</span>
-                    <div class="unit-time">
-                        <select name="unit" id="" required>
-                            <option value="">Tháng</option>
-                            <option value="">Quý</option>
-                            <option value="">Năm</option>
+                        <label for="heater">Nóng lạnh <span>*</span></label>
+                        <select name="heater" id="" required>
+                            <option value="" disabled selected>Nóng lạnh</option>
+                            <option value="">Có</option>
+                            <option value="">Không</option>
                         </select>
                     </div>
                 </div>
-                <label for="own">Chung chủ <span>*</span></label>
-                <select name="own" id="" required>
-                    <option value="" disabled selected>Chung chủ</option>
+                <label for="square">Phòng bếp <span>*</span></label>
+                <select name="heater" id="" required>
+                    <option value="" disabled selected>Phòng bếp</option>
                     <option value="">Có</option>
                     <option value="">Không</option>
                 </select>
-                <label for="pre-money">Tiền cọc (đ) <span>*</span></label>
-                <input name="pre-money" type="text" id="square" placeholder="Tiền cọc" required></input>
+                <div class="price-room">
+                    <div class="air-conditioner">
+                        <label for="price">Điều hoà <span>*</span></label>
+                        <select name="price" id="" required>
+                            <option value="" disabled selected>Điều hoà</option>
+                            <option value="">Có</option>
+                            <option value="">Không</option>
+                        </select>
+                    </div>
+                    <div class="balcony">
+                        <label for="balcony">Ban công <span>*</span></label>
+                        <select name="balcony" id="" required>
+                            <option value="" disabled selected>Ban công</option>
+                            <option value="">Có</option>
+                            <option value="">Không</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="price-room">
+                    <div class="air-conditioner">
+                        <label for="electric">Điện (đ/kWh) <span>*</span></label>
+                        <input type="text" name="electric" placeholder="Điện">
+                    </div>
+                    <div class="balcony">
+                        <label for="water">Nước (đ/m3) <span>*</span></label>
+                        <input type="text" name="water" placeholder="Nước">
+                    </div>
+                </div>
+                <label for="utility">Tiện ích khác <span>*</span></label>
+                <input name="utility" type="text" id="square" placeholder="Tện ích khác" required></input>
                 <div class="btn-container">
                     <button class="continue-address-btn" type="submit">TIẾP TỤC</button>
                 </div>
-                
             </form>
         </section>
     </main>
