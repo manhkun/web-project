@@ -16,16 +16,16 @@
                     <a href="" class="logo"><img src="./assets/icons/home (1) 1.png" alt=""></a>
                     <ul class="nav-link">
                         <li>
-                            <a href=""><img src="./assets/icons/home 1.png" alt=""><span>Trang chủ</span></a>
+                            <a href="./index.html"><img src="./assets/icons/home 1.png" alt=""><span>Trang chủ</span></a>
                         </li>
                         <li>
-                            <a href=""><img src="./assets/icons/house 1.png" alt=""><span>Tôi cho thuê</span></a>
+                            <a href="./manage_post.html"><img src="./assets/icons/house 1.png" alt=""><span>Tôi cho thuê</span></a>
                         </li>
                         <li>
                             <a href=""><img src="./assets/icons/bell 1.png" alt=""><span>Thông báo</span></a>
                         </li>
                         <li class="user">  
-                            <a href=""><img src="./assets/icons/user 1.png" alt=""><span>Phùng Mạnh</span></a>
+                            <a href="./login.html"><img src="./assets/icons/user 1.png" alt=""><span>Đăng nhập</span></a>
                         </li>
                     </ul>
                 </div>
@@ -36,10 +36,10 @@
                             <button type="submit"><i class="fa fa-search"></i></button>
                         </form>
                     </div>
-                    <button type="button-post" class="post">
+                    <a href="./post-address.html" class="post">
                         <img src="./assets/icons/sticky-notes 1.png" alt="">
                         <span>Đăng tin</span>
-                    </button>
+                    </a>
                 </div>
             </div>
         </nav>
@@ -79,7 +79,7 @@
             <div class="option-posted">
                 <div class="delete-posted">
                     <img src="./assets/icons/private 1.png" alt="">
-                    <p>Đã cho thuê/Xoá</p>
+                    <p >Đã cho thuê/Xoá</p>
                 </div>
                 <div class="extends-posted">
                     <img src="./assets/icons/plus 1.png" alt="">
@@ -104,7 +104,7 @@
             <div class="option-posted">
                 <div class="delete-posted">
                     <img src="./assets/icons/private 1.png" alt="">
-                    <p>Đã cho thuê/Xoá</p>
+                    <p class="del">Đã cho thuê/Xoá</p>
                 </div>
                 <div class="extends-posted">
                     <img src="./assets/icons/plus 1.png" alt="">
@@ -113,5 +113,29 @@
             </div>
         </section>
     </main>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script>
+        $('.del').click(function(){
+            Swal.fire({
+                title: 'Bạn có muốn xoá không?',
+                text: "You won't be able to revert this!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Yes, delete it!'
+                }).then((result) => {
+                if (result.isConfirmed) {
+                    Swal.fire(
+                    'Deleted!',
+                    'Your file has been deleted.',
+                    'success'
+                    )
+                }
+            })
+        })
+    </script>
 </body>
 </html>

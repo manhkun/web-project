@@ -45,52 +45,28 @@
         </nav>
     </header>
     <main class="post-container">
-        <section class="head-info">
-            <img src="./assets/icons/play-button.png" alt="">
-            <h3>THÔNG TIN</h3>
+        <section class="head-title">
+            <img id="back-button" src="./assets/icons/play-button.png" alt="">
+            <h3>TIÊU ĐỀ & ĐỊA CHỈ</h3>
         </section>
         <section class="form-post">
             <form action="">
-                <div class="form-room">
-                    <div class="type-room">
-                        <label for="room">Loại phòng <span>*</span></label>
-                        <select name="room" id="" required>
-                            <option value="" disabled selected>Loại phòng</option>
-                            <option value="">Phòng trọ</option>
-                            <option value="">Chung cư mini</option>
-                            <option value="">Nhà nguyên căn</option>
-                            <option value="">Chung cư nguyên căn</option>
-                        </select>
-                    </div>
-                    <div class="amount-room">
-                        <label for="amount">Số phòng <span>*</span></label>
-                        <input type="number" placeholder="Số phòng" required>
+                <label for="title">Tiêu đề <span>*</span></label>
+                <input type="text" placeholder="Tiêu đề" required>
+                <div class="duration-post">
+                    <label for="text">Thời hạn <span>*</span></label>
+                    <div class="input-duration">
+                        <input type="number" placeholder="Tuần" required min="1">
+                        <input type="number" placeholder="Tháng" required>
+                        <input type="number" placeholder="Quý" required>
+                        <input type="number" placeholder="Năm" required>
                     </div>
                 </div>
-                <label for="square">Diện tích (m2) <span>*</span></label>
-                <input name="square" type="text" id="square" placeholder="Diện tích" required></input>
-                <div class="price-room">
-                    <div class="price">
-                        <label for="price">Giá (đ) <span>*</span></label>
-                        <input type="text" name="price" placeholder="Giá">
-                    </div>
-                    <span>/</span>
-                    <div class="unit-time">
-                        <select name="unit" id="" required>
-                            <option value="">Tháng</option>
-                            <option value="">Quý</option>
-                            <option value="">Năm</option>
-                        </select>
-                    </div>
+                <div class="note">
+                    <h3>Lưu ý</h3>
+                    <p>-  Tiêu đề rõ ràng, ngắn gọn, dễ hiểu, không điền số điện thoại, địa chỉ cụ thể vào tiêu đề</p>
+                    <p>-  Lựa chọn thời hạn đăng phù hợp </p>
                 </div>
-                <label for="own">Chung chủ <span>*</span></label>
-                <select name="own" id="" required>
-                    <option value="" disabled selected>Chung chủ</option>
-                    <option value="">Có</option>
-                    <option value="">Không</option>
-                </select>
-                <label for="pre-money">Tiền cọc (đ) <span>*</span></label>
-                <input name="pre-money" type="text" id="square" placeholder="Tiền cọc" required></input>
                 <div class="btn-container">
                     <button class="continue-address-btn" type="submit">TIẾP TỤC</button>
                 </div>
