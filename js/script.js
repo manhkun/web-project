@@ -16,3 +16,28 @@ function imagePost(input) {
   $("input[id^='file-input']").change(function() {
     imagePost(this);
   });
+
+  $(".btn-notify").click(function(){
+    $(".notify-container").toggle();
+  })
+
+  $(".post-status-nav .posted").click(function(){
+    $(this).addClass("active");
+    $(".reject-post, .await-accept").removeClass("active");
+    $(".list-posted").show();
+    $(".list-denied, .list-pending").hide();
+  });
+
+  $(".post-status-nav .reject-post").click(function(){
+    $(this).addClass("active");
+    $(".posted, .await-accept").removeClass("active");
+    $(".list-denied").show();
+    $(".list-posted, .list-pending").hide();
+  });
+
+  $(".post-status-nav .await-accept").click(function(){
+    $(this).addClass("active");
+    $(".posted , .reject-post").removeClass("active");
+    $(".list-pending").show();
+    $(".list-posted, .list-denied").hide();
+  });

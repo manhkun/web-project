@@ -6,6 +6,9 @@
     <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,700;1,500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="slick-1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="slick-1.8.1/slick/slick-theme.css">
     <title>THUÊ NHÀ TRỌ</title>
 </head>
 <body>
@@ -13,7 +16,7 @@
         <nav>
             <div class="container">
                 <div class="status-bar">
-                    <a href="" class="logo"><img src="./assets/icons/home (1) 1.png" alt=""></a>
+                    <a href="index.html" class="logo"><img src="./assets/icons/home (1) 1.png" alt=""></a>
                     <ul class="nav-link">
                         <li>
                             <a href="./index.html"><img src="./assets/icons/home 1.png" alt=""><span>Trang chủ</span></a>
@@ -22,7 +25,22 @@
                             <a href="./manage_post.html"><img src="./assets/icons/house 1.png" alt=""><span>Tôi cho thuê</span></a>
                         </li>
                         <li>
-                            <a href=""><img src="./assets/icons/bell 1.png" alt=""><span>Thông báo</span></a>
+                            <a class="btn-notify">
+                                <img src="./assets/icons/bell 1.png" alt="">
+                                <span>Thông báo</span>
+                                <span class="noti-amount">2</span>
+                            </a>
+                            <div class="notify-container" hidden>
+                                <h3>THÔNG BÁO</h3>
+                                <div class="notify-item">
+                                    <img src="./assets/image/nhatro.jpg" alt="">
+                                    <p>Tin <strong>Nhà trọ giá rẻ</strong> đã được duyệt thành công</p>
+                                </div>
+                                <div class="notify-item">
+                                    <img src="./assets/image/nhatro.jpg" alt="">
+                                    <p>Tin <strong>Nhà trọ giá rẻ</strong> đã được duyệt thành công</p>
+                                </div>
+                            </div>
                         </li>
                         <li class="user">  
                             <a href="./login.html"><img src="./assets/icons/user 1.png" alt=""><span>Đăng nhập</span></a>
@@ -51,7 +69,7 @@
                 <img src="./assets/icons/profile 1.png" alt="">
                 <div class="profile-detail">
                     <div class="name">Phùng Quốc Mạnh</div>
-                    <a href="">Xem trang cá nhân của bạn</a>
+                    <a href="./profile.html">Xem trang cá nhân của bạn</a>
                 </div>
             </div>
             <div class="post-status-nav">
@@ -112,9 +130,87 @@
                 </div>
             </div>
         </section>
+        <section class="list-denied" hidden>
+            <div class="info-denied">
+                <img src="./assets/image/nhatro.jpg" alt="">
+                <div class="info-denied-detail">
+                    <p>Nhà trọ giá rẻ</p>
+                    <div class="noti-denied">
+                        <img src="./assets/icons/triangle 1.png" alt="">
+                        <h3>Lý do: Trùng lặp</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="info-denied">
+                <img src="./assets/image/nhatro.jpg" alt="">
+                <div class="info-denied-detail">
+                    <p>Nhà trọ giá rẻ</p>
+                    <div class="noti-denied">
+                        <img src="./assets/icons/triangle 1.png" alt="">
+                        <h3>Lý do: Trùng lặp</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="list-pending" hidden>
+            <div class="info-pending-item">
+                <div class="info-pending">
+                    <img src="./assets/image/nhatro.jpg" alt="">
+                    <div class="info-pending-detail">
+                        <p>Nhà trọ giá rẻ</p>
+                        <h3>1.000.000đ</h3>
+                        <div class="time">
+                            <img src="./assets/icons/clock 1.png" alt="">
+                            <div class="hour">16:38 07/11/20</div>
+                        </div>
+                        <div class="location">
+                            <img src="./assets/icons/pin 1.png" alt="">
+                            <div class="address">ĐHQG - HN</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="option-pending">
+                    <div class="delete-pending">
+                        <img src="./assets/icons/delete.png" alt="">
+                        <p >Xoá</p>
+                    </div>
+                    <a href="post-address.html" class="edit-pending">
+                        <img src="./assets/icons/edit.png" alt="">
+                        <p>Chỉnh sửa</p>
+                    </a>
+                </div>
+            </div>
+            <div class="info-pending-item">
+                <div class="info-pending">
+                    <img src="./assets/image/nhatro.jpg" alt="">
+                    <div class="info-pending-detail">
+                        <p>Nhà trọ giá rẻ</p>
+                        <h3>1.000.000đ</h3>
+                        <div class="time">
+                            <img src="./assets/icons/clock 1.png" alt="">
+                            <div class="hour">16:38 07/11/20</div>
+                        </div>
+                        <div class="location">
+                            <img src="./assets/icons/pin 1.png" alt="">
+                            <div class="address">ĐHQG - HN</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="option-pending">
+                    <div class="delete-pending">
+                        <img src="./assets/icons/delete.png" alt="">
+                        <p >Xoá</p>
+                    </div>
+                    <a href="post-address.html" class="edit-pending">
+                        <img src="./assets/icons/edit.png" alt="">
+                        <p>Chỉnh sửa</p>
+                    </a>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <script>
         $('.del').click(function(){
@@ -136,6 +232,7 @@
                 }
             })
         })
-    </script>
+    </script> -->
+    <script src="./js/script.js"></script>
 </body>
 </html>

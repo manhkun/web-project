@@ -6,6 +6,9 @@
     <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,700;1,500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="slick-1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="slick-1.8.1/slick/slick-theme.css">
     <title>THUÊ NHÀ TRỌ</title>
 </head>
 <body>
@@ -22,7 +25,22 @@
                             <a href="./manage_post.html"><img src="./assets/icons/house 1.png" alt=""><span>Tôi cho thuê</span></a>
                         </li>
                         <li>
-                            <a href=""><img src="./assets/icons/bell 1.png" alt=""><span>Thông báo</span></a>
+                            <a class="btn-notify">
+                                <img src="./assets/icons/bell 1.png" alt="">
+                                <span>Thông báo</span>
+                                <span class="noti-amount">2</span>
+                            </a>
+                            <div class="notify-container" hidden>
+                                <h3>THÔNG BÁO</h3>
+                                <div class="notify-item">
+                                    <img src="./assets/image/nhatro.jpg" alt="">
+                                    <p>Tin <strong>Nhà trọ giá rẻ</strong> đã được duyệt thành công</p>
+                                </div>
+                                <div class="notify-item">
+                                    <img src="./assets/image/nhatro.jpg" alt="">
+                                    <p>Tin <strong>Nhà trọ giá rẻ</strong> đã được duyệt thành công</p>
+                                </div>
+                            </div>
                         </li>
                         <li class="user">  
                             <a href="./login.html"><img src="./assets/icons/user 1.png" alt=""><span>Đăng nhập</span></a>
@@ -111,5 +129,6 @@
             </form>
         </section>
     </main>
+    <script src="./js/script.js"></script>
 </body>
 </html>

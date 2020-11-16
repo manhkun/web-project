@@ -96,6 +96,47 @@ form {
   display: flex;
 }
 
+.btn-notify {
+  position: relative;
+}
+
+.btn-notify:hover {
+  cursor: pointer;
+}
+
+.status-bar .noti-amount {
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 0px 2px;
+  position: absolute;
+  left: 10%;
+}
+
+.notify-container {
+  position: absolute;
+  left: 50%;
+  background-color: white;
+  width: 500px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.notify-container h3 {
+  padding: 10px;
+}
+
+.notify-container .notify-item {
+  display: flex;
+  font-size: 1.1rem;
+  border-top: 0.5px solid rgba(0, 0, 0, 0.15);
+  padding: 10px;
+}
+
+.notify-container img {
+  width: 25%;
+  margin-right: 10px;
+}
+
 .search input[type="text"] {
   height: 2rem;
   padding: 0 1rem;
@@ -116,14 +157,16 @@ form {
 .post {
   background-color: var(--secondPrimaryColor);
   height: 2rem;
+  display: flex;
   align-items: center;
   justify-content: center;
   text-transform: uppercase;
   color: white;
   font-weight: 500;
-  padding: 0 1em;
+  padding: 0 1rem;
   border: none;
   border-radius: 5px;
+  font-size: 0.8rem;
 }
 
 .post img {
@@ -472,7 +515,9 @@ form {
   padding: 0px;
 }
 
-.info-posted {
+.info-posted,
+.info-pending, 
+.info-denied {
   display: flex;
   background-color: white;
   margin-top: 10px;
@@ -480,13 +525,17 @@ form {
   padding: 15px;
 }
 
-.info-posted > img {
+.info-posted > img,
+.info-pending > img,
+.info-denied > img {
   width: 150px;
   height: auto;
   border-radius: 10px;
 }
 
-.info-posted-detail {
+.info-posted-detail,
+.info-pending-detail,
+.info-denied-detail {
   margin-left: 10px;
   width: 25%;
   display: flex;
@@ -503,6 +552,22 @@ form {
   font-size: 1.4rem;
 }
 
+.info-denied-detail p {
+  opacity: .5;
+  font-size: 1.2rem;
+}
+
+.info-denied-detail .noti-denied {
+  display: flex;
+  color: red;
+}
+
+.info-denied-detail .noti-denied h3 {
+  margin-left: 10px;
+}
+
+
+
 .time,
 .location {
   display: flex;
@@ -515,14 +580,17 @@ form {
   margin-right: 5px;
 }
 
-.option-posted {
+.option-posted,
+.option-pending {
   display: flex;
   justify-content: space-between;
   margin-top: 3px;
 }
 
 .option-posted .delete-posted,
-.option-posted .extends-posted {
+.option-posted .extends-posted,
+.option-pending .delete-pending,
+.option-pending .edit-pending {
   display: flex;
   width: 49.8%;
   justify-content: center;
@@ -533,7 +601,9 @@ form {
 }
 
 .option-posted .delete-posted *,
-.option-posted .extends-posted * {
+.option-posted .extends-posted *,
+.option-pending .delete-pending *,
+.option-pending .edit-pending * {
   cursor: pointer;
 }
 
@@ -541,6 +611,16 @@ form {
 .option-posted .extends-posted img {
   margin-right: 5px;
 }
+
+.option-pending img {
+  width: 30px;
+}
+
+.option-pending a {
+  color: black;
+}
+
+
 
 @media only screen and (max-width: 1000px) {
   .manage-post {
